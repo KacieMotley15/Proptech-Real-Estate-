@@ -1,5 +1,6 @@
-# Proptech-Real-Estate-
 # Housing Rental Analysis for San Francisco
+
+## Introduction
 
 In this challenge, your job is to use your data visualization skills, including aggregation, interactive visualizations, and geospatial analysis, to find properties in the San Francisco market that are viable investment opportunities.
 
@@ -7,58 +8,51 @@ In this challenge, your job is to use your data visualization skills, including 
 
 Use the `san_francisco_housing.ipynb` notebook to visualize and analyze the real-estate data.
 
-Note that this assignment requires you to create a visualization by using `hvPlot` and `GeoViews`. Additionally, you need to read the `sfo_neighborhoods_census_data.csv` file from the Resources folder into the notebook and create the DataFrame that you’ll use in the analysis.
+Note that this assignment requires you to create visualizations using `hvPlot` and `GeoViews`. Additionally, you need to read the `sfo_neighborhoods_census_data.csv` file from the Resources folder into the notebook and create the DataFrame that you’ll use in the analysis.
 
-The main task in this Challenge is to visualize and analyze the real-estate data in your Jupyter notebook. Use the `san_francisco_housing.ipynb` notebook to complete the following tasks:
+The main tasks in this challenge are as follows:
 
 1. Calculate and plot the housing units per year.
-
 2. Calculate and plot the average prices per square foot.
-
 3. Compare the average prices by neighborhood.
-
 4. Build an interactive neighborhood map.
-
 5. Compose your data story.
 
-## Calculate and Plot the Housing Units per Year
+Please follow the instructions in the `san_francisco_housing.ipynb` notebook to complete these tasks.
 
-For this part of the assignment, use numerical and visual aggregation to calculate the number of housing units per year, and then visualize the results as a bar chart. To do so, complete the following steps:
+## Data Files
 
-1. Use the `groupby` function to group the data by year. Aggregate the results by the mean of the groups.
+The following data files are required for this analysis:
 
-2. Use the `hvplot` function to plot the `housing_units_by_year` DataFrame as a bar chart. Make the x-axis represent the year and the y-axis represent the housing_units.
+- `sfo_neighborhoods_census_data.csv`: Contains the real estate data for San Francisco neighborhoods.
 
-3. Style and format the line plot to ensure a professionally styled visualization.
+Please make sure to have the required data files in the correct directory before running the notebook.
 
-Answer the following question:
+## Dependencies
 
-- What’s the overall trend in housing units over the period that you’re analyzing?
+The following dependencies are required to run the notebook:
 
-## Calculate and Plot the Average Sale Prices per Square Foot
+- pandas
+- hvPlot
+- GeoViews
+- pathlib
+- os
 
-For this part of the assignment, use numerical and visual aggregation to calculate the average prices per square foot, and then visualize the results as a bar chart. To do so, complete the following steps:
+Please ensure that you have these dependencies installed before running the notebook.
 
-1. Group the data by year, and then average the results. What’s the lowest gross rent that’s reported for the years that the DataFrame includes?
+## Usage
 
-2. Create a new DataFrame named `prices_square_foot_by_year` by filtering out the “housing_units” column. The new DataFrame should include the averages per year for only the sale price per square foot and the gross rent.
+To run the notebook, follow these steps:
 
-3. Use `hvPlot` to plot the `prices_square_foot_by_year` DataFrame as a line plot.
+1. Ensure that all the required data files are in the correct directory.
+2. Install the necessary dependencies using `pip install pandas hvplot geoviews pathlib`.
+3. Open the `san_francisco_housing.ipynb` notebook using Jupyter Notebook or JupyterLab.
+4. Execute each cell in the notebook in sequential order to visualize and analyze the real estate data.
 
-4. Style and format the line plot to ensure a professionally styled visualization.
+Please refer to the notebook for detailed instructions and code implementation.
 
-Use both the `prices_square_foot_by_year` DataFrame and interactive plots to answer the following questions:
+## Conclusion
 
-- Did any year experience a drop in the average sale price per square foot compared to the previous year?
-- If so, did the gross rent increase or decrease during that year?
+By following the instructions in the `san_francisco_housing.ipynb` notebook, you will be able to calculate and visualize various aspects of the San Francisco housing rental market. The analysis includes housing units per year, average prices per square foot, comparison of prices by neighborhood, and an interactive neighborhood map. These visualizations will help you identify potential investment opportunities and gain insights into the San Francisco real estate market.
 
-## Compare the Average Sale Prices by Neighborhood
-
-For this part of the assignment, use interactive visualizations and widgets to explore the average sale price per square foot by neighborhood. To do so, complete the following steps:
-
-1. Create a new DataFrame that groups the original DataFrame by year and neighborhood. Aggregate the results by the mean of the groups.
-
-2. Filter out the “housing_units” column to create a DataFrame that includes only the sale_price_sqr_foot and gross_rent averages per year.
-
-3. Create an interactive line plot with `hvPlot` that visualizes both sale_price_sqr_foot and gross_rent. Set the x-axis parameter to the year (`x="year"`). Use the `groupby` parameter to create an interactive widget for neighborhood.
-
+Happy analyzing!
